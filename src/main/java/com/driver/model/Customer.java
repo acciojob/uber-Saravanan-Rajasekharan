@@ -10,7 +10,7 @@ public class Customer{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int CustomerId;
 
     private String mobile;
 
@@ -35,7 +35,7 @@ public class Customer{
     }
 
     public Customer(int id, String mobile, String password) {
-        this.id = id;
+        this.CustomerId = id;
         this.mobile = mobile;
         this.password = password;
     }
@@ -44,12 +44,12 @@ public class Customer{
     //Getters and Setters
 
 
-    public int getId() {
-        return id;
+    public int getCustomerId() {
+        return CustomerId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCustomerId(int CustomerId) {
+        this.CustomerId = CustomerId;
     }
 
     public String getMobile() {

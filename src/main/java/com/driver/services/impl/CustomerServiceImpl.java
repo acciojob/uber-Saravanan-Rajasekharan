@@ -49,7 +49,7 @@ public class CustomerServiceImpl implements CustomerService {
 		Collections.sort(driverList,DriId);
 
 		for(Driver driver : driverList){
-			if(driver.getCab().isAvailable()){
+			if(driver.getCab().getAvailable()){
 				TripBooking tripBooking = new TripBooking();
 				tripBooking.setFromLocation(fromLocation);
 				tripBooking.setToLocation(toLocation);
@@ -79,7 +79,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	public static Comparator<Driver> DriId = new Comparator<Driver>() {
 		public int compare(Driver d1, Driver d2){
-			return d1.getId()-d2.getId();
+			return d1.getDriverId()-d2.getDriverId();
 		}
 	};
 
